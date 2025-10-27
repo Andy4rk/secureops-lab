@@ -1,0 +1,67 @@
+---
+- name: STIG Remediation for Ubuntu Server
+  hosts: stig_targets
+  become: yes
+  vars:
+    auditd_max_log_file: 8
+    sshd_protocol: 2
+    password_max_days: 90
+    password_min_days: 7
+    password_warn_age: 14
+
+  tasks:
+
+    - name: Ensure auditd is installed
+      apt:
+        name: auditd
+        state: present
+        update_cache: yes
+
+    - name: Configure auditd max log file size
+      lineinfile:
+        path: /etc/audit/auditd.conf
+        regexp: '^max_log_file ='
+        line: "max_log_file = {{ auditd_max_log_file }}"
+        notify: restart auditd
+
+    - name: Enforce SSH protocol version 2
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^Protocol'
+        line: "Protocol {{ sshd_protocol }}"
+        notify: restart ssh
+
+    - name: Set password aging policies
+      lineinfile:
+        path: /etc/login.defs
+        regexp: '^PASS_MAX_DAYS'
+        line: "PASS_MAX_DAYS {{ password_max_days }}"
+      notify: restart login
+
+    - name: Set password minimum days
+      lineinfile:
+        path: /etc/login.defs
+        regexp: '^PASS_MIN_DAYS'
+        line: "PASS_MIN_DAYS {{ password_min_days }}"
+      notify: restart login
+
+    - name: Set password warning age
+      lineinfile:
+        path: /etc/login.defs
+        regexp: '^PASS_WARN_AGE'
+        line: "PASS_WARN_AGE {{ password_warn_age }}"
+      notify: restart login
+
+  handlers:
+    - name: restart auditd
+      service:
+        name: auditd
+        state: restarted
+
+    - name: restart ssh
+      service:
+        name: ssh
+        state: restarted
+
+    - name: restart login
+      command: echo "Login settings updated"
