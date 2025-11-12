@@ -10,7 +10,7 @@ Home lab project to simulate RMF-compliant cybersecurity operations for defense 
 
 # Lab Architecture
 - Proxmox VE hypervisor on Mini PC (Ryzen 9, 32GB RAM)
-- VMs: Ubuntu (STIG scans), Kali (red team), pfSense (firewall), Flask app (CI/CD target)
+- VMs: Ubuntu1 (STIG scans), Ubuntu2 (Wazuh host), Kali (red team), Windows 11 (blue team), Flask app (CI/CD target)
 - Containers: DevSecOps pipeline, dashboards, log aggregation
 
 # Repo Structure
@@ -21,7 +21,9 @@ Home lab project to simulate RMF-compliant cybersecurity operations for defense 
 - 'dashboards/': Grafana, ELK, Wazuh configs
 
 # Roadmap
-- [ ] Set up Proxmox and base VMs
+- [X] Set up Proxmox and base VMs
+- [X] Implement Wazuh Indexer, Server, and Dashboard
+- [X] Configure agents on each endpoint for Wazuh SIEM
 - [ ] Automate STIG scans with OpenSCAP
 - [ ] Build threat models using OWASP Threat Dragon
 - [ ] Integrate GitHub Actions + Trivy for DevSecOps
