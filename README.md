@@ -24,7 +24,7 @@ Home lab project to simulate RMF-compliant cybersecurity operations for defense 
 - [X] Set up Proxmox and base VMs
 - [X] Implement Wazuh Indexer, Server, and Dashboard
 - [X] Configure agents on each endpoint for Wazuh SIEM
-- [ ] Automate STIG scans with OpenSCAP
+- [X] Automate STIG scans with OpenSCAP
 - [ ] Build threat models using OWASP Threat Dragon
 - [ ] Integrate GitHub Actions + Trivy for DevSecOps
 - [ ] Map controls to NIST 800-53 and RMF steps
