@@ -71,7 +71,7 @@ The high number of failures is expected and serves as a clear starting point for
 **Not Applicable:** 8  
 **Score:** **45%**
 
-Kali Linux is intentionally configured with looser, penetration-testing-oriented defaults.  
+Kali Linux is intentionally configured with lighter, penetration-testing-oriented defaults.  
 Many CIS controls fail by design, making it a useful “worst-case baseline” for demonstrating:
 
 - Hardening effectiveness  
