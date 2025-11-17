@@ -15,7 +15,7 @@ This lab is built on a single Proxmox VE host and is designed to look and feel l
 - **Windows 11** – blue-team endpoint and hardening target
 - **Kali Linux** VMs – attacker / tooling box, used for generating activity and testing detections
 
-The focus of the project is:
+The focus of this project is:
 
 - Security monitoring with **Wazuh SIEM**
 - Automated **SCA / OSCAP** checks
