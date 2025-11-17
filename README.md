@@ -27,8 +27,8 @@ Home lab project to simulate RMF-compliant cybersecurity operations for defense 
 - [X] Automate STIG scans with OpenSCAP
 - [ ] Build threat models using OWASP Threat Dragon
 - [ ] Integrate GitHub Actions + Trivy for DevSecOps
-- [ ] Map controls to NIST 800-53 and RMF steps
-- [ ] Create dashboards for compliance and threat visibility
+- [X] Map controls to NIST 800-53 and RMF steps
+- [X] Create dashboards for compliance and threat visibility
 
 # License
 Apache 2.0
