@@ -1,36 +1,27 @@
-Cybersecurity Home Lab — Wazuh SIEM + CIS Benchmark Compliance Monitoring
+## Screenshot Gallery
 
-This repository documents my cybersecurity engineering home lab, built to demonstrate skills in:
-	•	Host monitoring and security operations
-	•	SIEM deployment & configuration
-	•	CIS Benchmark & compliance scanning
-	•	Continuous monitoring and reporting
-	•	Log analysis and detection engineering
-	•	Linux, Windows, and Kali hardening workflows
-	•	Automation of security controls (STIG/NIST-aligned)
+This folder contains evidence from the lab environment: Wazuh dashboards, compliance scans, and hardening results.
 
-My environment uses a single-node Wazuh SIEM hosted on Ubuntu, with agents deployed on:
-	•	Windows 11 workstation
-	•	Kali Linux workstation
-	•	Ubuntu/Kali-based Linux VM
-	•	Additional endpoints as the lab grows
+> Note: Only initial scan screenshots are checked in at this time. Additional views (agents, alerts, updated hardening state) will be added as they are captured.
+
+# Each screenshot is intended to show:
+
+- That Wazuh is successfully running and collecting scan results
+- That baseline configuration checks have been performed
+- A starting point for future hardening and remediation work
+
+
+# My environment uses a single-node Wazuh SIEM hosted on Ubuntu, with agents deployed on:
+- Windows 11 workstation
+- Kali Linux workstation
+- Ubuntu/Kali-based Linux VM
+- Additional endpoints as the lab grows
 
 This README focuses on the Security Configuration Assessment (SCA) capability within Wazuh, which evaluates systems against CIS Benchmarks — commonly used in enterprise security programs, DoD/STIG environments, and regulated infrastructures.
 
-⸻
-
-Overview: Continuous Configuration Compliance Monitoring
-
-Wazuh’s SCA module scans each endpoint using CIS Benchmark policies and identifies:
-	•	Passed controls
-	•	Failed controls
-	•	Not applicable checks
-	•	Detailed remediation guidance
-	•	Severity
-	•	Timestamped compliance events
 
 These scans serve as the baseline state before hardening the systems.
-The initial scans are intentionally “ugly” — this demonstrates the real-world reality of un-hardened operating systems and sets up the opportunity for before/after improvement.
+The initial scans are intentionally insecure — this demonstrates the real-world reality of un-hardened operating systems and sets up the opportunity for before/after improvement.
 
 ⸻
 
