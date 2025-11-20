@@ -48,7 +48,7 @@ The focus of this project is:
 
 A network / VM topology diagram and screenshots live under:
 
-- 'docs/screenshots/Home_Lab_Topology.png' (Physical Network Diagram)
+- `docs/screenshots/Home_Lab_Topology.png` (Physical Network Diagram)
 - `docs/screenshots/` (Wazuh dashboards, scan results, hardening proof)
 - `docs/RMF_Mapping.md` (how each component maps to controls and RMF steps)
 
